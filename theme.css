@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Phudu:wght@300..900&display=swap');
+
+:root {
+    --background: #141619;
+    --semi-background: rgba(20, 22, 25, 0.8);
+    --foreground: hsl(220, 11%,98%);
+    --secondary: hsl(220, 11%, 10%);
+    --border: hsl(220, 11%,17%);
+    --muted: hsl(220, 11%, 70%);
+    --primary: #60a5fa;
+}
+
+/* MINOR HOUSES */
+body[class*="Bolton"] { --primary: #f6a0a0; }
+body[class*="Baelish"] { --primary: #47bb47; }
+
+/* GREAT HOUSES */
+body[class*="Stark"] { --primary: #bac8e8; }
+body[class*="Arryn"] { --primary: #38bdf8; }
+body[class*="Baratheon"] { --primary: #facc15; }
+body[class*="Tully"] { --primary: #007fff; }
+body[class*="Greyjoy"] { --primary: #e0b817; }
+body[class*="Lannister"] { --primary: #dc6017; }
+body[class*="Tyrell"] { --primary: #24a824; }
+body[class*="Martell"] { --primary: #e88520; }
+
+/* ROYAL */
+body[class*="Targaryen"] { --primary: #f87171; }
+
+a { color: var(--primary); }
+hr { background: var(--border) !important; }
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Nata Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+h2, h3, h4, h5, h6, p, a, span, b {
+    font-family: "Nata Sans", sans-serif !important;
+}
+
+body[class*="Main_Page"] div.mw-parser-output td, body[class*="Main_Page"] div.mw-parser-output div, body[class*="Main_Page"] div.mw-parser-output div.mf-featured div {
+    background: var(--secondary) !important;
+    color: var(--foreground);
+    border-color: var(--border) !important;
+}
+body[class*="Main_Page"] div#bodyContent div.mw-parser-output img[alt*="Beige"] {
+    opacity: 0;
+}
+
+/* tablolar */
+.navbox-subgroup .navbox-group, .navbox-subgroup .navbox-abovebelow {
+    background: var(--background);
+}
+.navbox-abovebelow, .navbox-group, .navbox-subgroup .navbox-title {
+    background: var(--secondary);
+}
+.navbox, .navbox-subgroup {
+    background: var(--secondary);
+}
+.navbox-title, table.navbox th {
+    background: var(--border);
+}
+.navbox {
+    border-radius: 2rem !important;
+    overflow: hidden;
+}
+.navbox-even {
+    background: var(--border);
+}
+.navbox * {
+    border-color: var(--border) !important;
+}
+
+div.catlinks {
+    background: var(--secondary);
+    border-color: var(--border);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+table.wikitable tbody {
+    background: var(--secondary);
+    border-radius: 2rem !important;
+    overflow: hidden !important;
+}
+table.wikitable tbody * {
+    border-color: var(--border) !important;
+}
+table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > th, table.wikitable > * > tr > td {
+    color: var(--muted);
+}
+
+div#mw-navigation, div#footer { /* navbar */
+    background: var(--secondary);
+    border-color: var(--border) !important;
+}
+div#footer { 
+    border-top: 1px solid; 
+    padding: 3rem 0;
+}
+div#footer:after {
+    padding: 2rem 0 0 0;
+    content: 'theme by swoth.dev';
+    color: var(--muted);
+    display: flex;
+    justify-content: center;
+}
+div#mw-navigation a { color: var(--muted); }
+div#mw-navigation a:not(:first-child) { 
+    color: white; 
+    text-shadow: none;
+}
+div#mw-navigation li.nav a:hover {
+    background: var(--border) !important;
+}
+div#mw-navigation input {
+    color: var(--muted);
+    background: var(--background);
+    border-color: var(--border);
+}
+
+ul.referencetooltip li[id] { /* referans notu */
+    background: var(--semi-background);
+    backdrop-filter: blur(16px);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+}
+ul.referencetooltip li:not(:first-child) {
+    display: none;
+}
+
+h1, a.navbar-brand, h1 span {
+    font-family: "Phudu", sans-serif !important;
+    font-optical-sizing: auto;
+}
+
+h1.page-header {
+    border-color: var(--border);
+}
+
+a.navbar-brand {
+    font-weight: bold;
+    color:  !important;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border)transparent;
+}
+
+div.mwe-popups { /* popups */
+    background: var(--semi-background);
+    backdrop-filter: blur(16px);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-sizing: content-box;
+    border: 1px solid var(--border);
+}
+.mwe-popups .mwe-popups-extract:after {
+    display: none
+}
+.mwe-popups .mwe-popups-extract {
+    color: var(--foreground);
+}
+.mwe-popups.flipped_x_y:before, .mwe-popups.flipped_x_y:after, .mwe-popups.flipped_y:before, .mwe-popups.flipped_y:after, .mwe-popups.flipped_x:before, .mwe-popups.flipped_x:after, .mwe-popups.mwe-popups-no-image-tri:before, .mwe-popups.mwe-popups-no-image-tri:after {
+    display: none;
+}
+.mwe-popups .mwe-popups-settings-icon:hover {
+    background: var(--border);
+}
+
+div.thumbinner { /* kartlar */
+    background: var(--secondary);
+    border-color: var(--border);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+div.thumbinner img {
+    border: none;
+    border-radius: 1rem;
+}
+div.thumbinner div.thumbcaption {
+    padding-top: 1rem;
+    color: var(--muted);
+}
+
+table.infobox { /* kutular */
+    background: var(--secondary);
+    border-color: var(--border);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+table.infobox tbody:first-child tr:first-child td:nth-child(2) br {
+    display: none;
+}
+
+table.infobox tbody:first-child tr:first-child td:nth-child(2) span {
+    color: var(--muted);
+}
+
+table.infobox tbody:first-child tr:first-child td:nth-child(2) {
+    min-height: 55px;
+} /* isim barı */
+
+table.infobox tbody:first-child tr:first-child td:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table.infobox td.infobox-image img {
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+table.infobox td.infobox-image div {
+    color: var(--muted);
+    padding: 0.5rem 0;
+}
+
+table.infobox tr th[colspan="2"]:not(:has(table)) {
+    padding-top: 2rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
+    background-color: transparent !important;
+    background: linear-gradient(to bottom, transparent, var(--background));
+}
+
+table.infobox th[scope="row"] {
+    color: var(--muted);
+    padding-right: 0.5rem;
+}
